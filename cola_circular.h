@@ -36,6 +36,9 @@ public:
     bool verFrente(T& valor) const;
     void mostrarEstado() const;
     void vaciar();
+    T obtenerEnPosicion(int pos) const;
 };
+
+#include "operaciones_cola_circular.h"
 
 #endif
