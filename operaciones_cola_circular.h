@@ -89,6 +89,17 @@ void ColaCircular<T>::vaciar() {
     while (!estaVacia()) {
         desencolar(temporal);
     }
+template <typename T>
+T ColaCircular<T>::obtenerEnPosicion(int pos) const {
+    if (estaVacia() || pos < 0 || pos >= cantidad) {
+        throw std::out_of_range("Posicion fuera de rango");
+    }
+    Nodo* actual = frente;
+    for (int i = 0; i < pos; ++i) {
+        actual = actual->sig;
+    }
+    return actual->dato;
+}   
 }
 
 #endif
