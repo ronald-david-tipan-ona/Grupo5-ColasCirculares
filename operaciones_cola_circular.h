@@ -89,6 +89,8 @@ void ColaCircular<T>::vaciar() {
     while (!estaVacia()) {
         desencolar(temporal);
     }
+}
+
 template <typename T>
 T ColaCircular<T>::obtenerEnPosicion(int pos) const {
     if (estaVacia() || pos < 0 || pos >= cantidad) {
@@ -99,7 +101,7 @@ T ColaCircular<T>::obtenerEnPosicion(int pos) const {
         actual = actual->sig;
     }
     return actual->dato;
-}   
 }
+
 
 #endif
