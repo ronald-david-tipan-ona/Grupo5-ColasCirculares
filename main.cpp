@@ -70,6 +70,8 @@ int main() {
         cout << "\nPresione Enter para continuar...";
         cin.get();
 
+        Interfaz::dibujar(colaImpresion);
+
     } while (opcion != 0);
 
     Interfaz::cerrar();
